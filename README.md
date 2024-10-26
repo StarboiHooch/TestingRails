@@ -28,6 +28,10 @@ https://guides.rubyonrails.org/getting_started.html
 8. Save and visit /articles to see the new view!
 9. Set the new view as the homepage by adding `root "articles#index"` to the top of `config/routes.rb`.
 
+### Making a Model
+10. Generate a model using `ruby bin/rails generate model Article title:string body:text`.
+
+
 
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
@@ -35,3 +39,5 @@ https://guides.rubyonrails.org/getting_started.html
 - Routes map an incoming HTTP request to a specific controller action.
 
 -  When an action does not explicitly render a view (or otherwise trigger an HTTP response), Rails will automatically render a view that matches the name of the controller and action.
+
+> Application classes and modules are available everywhere, you do not need and should not load anything under app with require.
