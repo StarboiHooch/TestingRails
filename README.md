@@ -35,7 +35,7 @@ https://guides.rubyonrails.org/getting_started.html
 
 12. Update article view to show a list of titles of all articles.
 
-### CRUD (Create, Read, Update, Delete)
+### Displaying articles
 13. Add a new route to view a single article using `get "/articles/:id", to "articles#show`
 
 14. Add show action to articles controller.
@@ -51,6 +51,15 @@ https://guides.rubyonrails.org/getting_started.html
     `href="/articles/<%= article.id %>"` will become `href="<%= article_path(article) %>"`
 
 19. Tidy up even further using `link_to`.
+
+### Creating new articles
+20. Add `new` and `create` actions to articles controller.
+
+21. Create `new` view using the rails form builder.
+
+22. Use strong parameters to specify which parameters can be saved or updated.
+
+23. Add validation to the article model.
 
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
