@@ -35,6 +35,23 @@ https://guides.rubyonrails.org/getting_started.html
 
 12. Update article view to show a list of titles of all articles.
 
+### CRUD (Create, Read, Update, Delete)
+13. Add a new route to view a single article using `get "/articles/:id", to "articles#show`
+
+14. Add show action to articles controller.
+
+15. Add show view to `app/views/articles/`.
+
+16. Update the routing to use the rails `resources` method.
+
+17. Check which routes this has added by running `ruby cin/rails routes`.
+
+18. Tidy up links in view using `article_path`.
+
+    `href="/articles/<%= article.id %>"` will become `href="<%= article_path(article) %>"`
+
+19. Tidy up even further using `link_to`.
+
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
 
