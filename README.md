@@ -3,7 +3,7 @@
 This is to document my first time using Ruby on Rails. I am following the official guide:
 https://guides.rubyonrails.org/getting_started.html
 
-## Steps taken
+## Guide contents summary
 
 ### Setup
 1. Install Ruby and SQLite3
@@ -26,6 +26,7 @@ https://guides.rubyonrails.org/getting_started.html
     <h1>Hello, Rails!</h1>
     ```
 8. Save and visit /articles to see the new view!
+9. Set the new view as the homepage by adding `root "articles#index"` to the top of `config/routes.rb`.
 
 
 ## Notes
