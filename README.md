@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is to document my first time using Ruby on Rails. I am following the official guide:
+https://guides.rubyonrails.org/getting_started.html
 
-Things you may want to cover:
+## Steps taken
 
-* Ruby version
+### Setup
+1. Install Ruby and SQLite3
+2. Install Rails using `gem install rails`
+3. Create basic app template using `rails new blog`
+4. Start web server locally using `ruby bin/rails server`
 
-* System dependencies
+### Creating a new view
+5. Create new route in `config/routes.rb` with:
+    ```ruby
+    get "/articles", to: "articles#index"
+    ```
+6. Create the controller using `ruby bin/rails generate controller Articles index --skip-routes`.
 
-* Configuration
+    This creates several files, including `app/controller/articles_controller.rb` which contains the index action.
 
-* Database creation
+7. Replace auto-generated content of `app/views/articles/index.html.erb` with:
 
-* Database initialization
+    ```html
+    <h1>Hello, Rails!</h1>
+    ```
+8. Save and visit /articles to see the new view!
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Notes
+> In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
 
-* Deployment instructions
+- Routes map an incoming HTTP request to a specific controller action.
 
-* ...
+-  When an action does not explicitly render a view (or otherwise trigger an HTTP response), Rails will automatically render a view that matches the name of the controller and action.
