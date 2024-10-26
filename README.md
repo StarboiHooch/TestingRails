@@ -31,7 +31,9 @@ https://guides.rubyonrails.org/getting_started.html
 ### Making a Model
 10. Generate a model using `ruby bin/rails generate model Article title:string body:text`.
 
+11. Use the rails console to create a new article.
 
+12. Update article view to show a list of titles of all articles.
 
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
