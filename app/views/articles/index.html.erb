@@ -1,11 +1,12 @@
-<h1>Articles</h1>
 
-<ul>
+<div class="flex justify-center relative">
+    <h2 class="align-center underline text-xl inline">articles</h2>
+    <%= link_to "+", new_article_path, class:"absolute top-0 right-0 inline text-4xl font-bold align-right"%>
+</div>
+<ul class="mt-5 grid sm:grid-clos-1 md:grid-cols-2 lg:grid-cols-3">
     <% @articles.each do |article| %>
-    <li>
-        <%= link_to article.title, article %>
+    <li class="flex m-5 border-gray-800 border-4 border-dotted rounded-xl text-center hover:border-amber-300 hover:bg-gray-800 hover:text-white">
+        <%= link_to article.title, article, class:"w-full h-full p-5" %>
     </li>
     <% end %>
 </ul>
-
-<%= link_to "New Article", new_article_path %>

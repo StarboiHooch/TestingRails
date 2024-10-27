@@ -1,7 +1,13 @@
 # README
 
-This is to document my first time using Ruby on Rails. I am following the official guide:
+This is to document my first time using Ruby on Rails. I started by following the official guide:
 https://guides.rubyonrails.org/getting_started.html
+
+After setting up the ability to create, read, update and delete articles, I decided to deviate from the guide and add some styling to my app.
+
+Run using `bin/dev` in WSL console.
+
+
 
 ## Guide contents summary
 
