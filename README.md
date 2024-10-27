@@ -68,6 +68,12 @@ https://guides.rubyonrails.org/getting_started.html
 
 26. Refactor new article form into generic article form partial which can then be used for new and edit views.
 
+27. Link to edit view from show view.
+
+28. Add destroy action to controller.
+
+29. Link the destroy action to the show view using Turbo attributes to create a confirmation dialog and a DELETE request.
+
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
 
