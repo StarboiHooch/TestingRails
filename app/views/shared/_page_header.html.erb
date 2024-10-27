@@ -1,4 +1,4 @@
-<div class="flex justify-center relative">
+<div class="flex justify-center relative mb-5">
     <h2 id="page-title" class="underline text-xl" ><%= title %></h2>
     <% if action_icons.present? %>
         <div id="page-action-icons" class="absolute top-0 right-0 text-4xl font-bold align-right">
@@ -6,7 +6,7 @@
                 <%= link_to action[:path],
                      class: "hover:text-amber-300",
                      data: action[:data].presence || {}  do %>
-                    <i class="fa fa-solid <%= action[:icon]%>"></i>
+                    <i class="fa <%= action[:icon]%>"></i>
                 <% end%>
             <% end %>
         </div>  

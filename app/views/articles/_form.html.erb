@@ -1,21 +1,37 @@
 <%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+  <div class="container">
 
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div id="edit-title" class="flex flex-col lg:flex-row mt-5">
+      <div class="w-full lg:w-1/4 text-left lg:text-right p-2">
+        <%= form.label :title, "Title:"%>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <%= form.text_field :title, class: "w-full h-full rounded-xl border-2 border-gray-400"%>
+      </div>  
+      <div id="body-errors" class="w-full lg:w-1/4 text-left p-2">
+        <% article.errors.full_messages_for(:title).each do |message| %>
+          <div class="text-red-400"><%= message %></div>
+        <% end %>
+      </div>
+    </div>
 
-  <div>
-    <%= form.submit %>
+    <div id="edit-body" class="flex flex-col lg:flex-row mt-5">
+    
+      <div class="w-full lg:w-1/4 text-left lg:text-right p-2">
+        <%= form.label :body, "Body:"%>
+      </div>
+      <div class="w-full lg:w-1/2">
+        <%= form.text_area :body, class: "w-full h-full rounded-xl border-2 border-gray-400"%>
+      </div>  
+      <div id="body-errors" class="w-full lg:w-1/4 text-left p-2">
+        <% article.errors.full_messages_for(:body).each do |message| %>
+          <div class="text-red-400"><%= message %></div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-5">
+      <%= form.button "Save", type: :submit, class: "rounded-xl border-2 border-gray-800 p-2"%>
+    </div>
   </div>
 <% end %>

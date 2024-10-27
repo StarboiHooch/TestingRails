@@ -1,2 +1,6 @@
-<%= render "shared/page_header", title: "Edit Article", action_icons: {}%>
+<%= render "shared/page_header",
+    title: "Edit Article",
+    action_icons: [
+        {icon: "fa-close", path: article_path}
+        ]%>
 <%= render "form", article: @article%>

@@ -1,3 +1,6 @@
-<h1>New Article</h1>
+<%= render "shared/page_header",
+    title: "New Article",
+    action_icons: [
+        {icon: "fa-close", path: root_path}
+        ]%>
 <%= render "form", article: @article%>
-<%= link_to "home", articles_path%>
