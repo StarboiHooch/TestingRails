@@ -61,6 +61,13 @@ https://guides.rubyonrails.org/getting_started.html
 
 23. Add validation to the article model.
 
+24. Add error messages from validation to the form.
+
+### Updating existing articles
+25. Add actions in article controller for edit and update.
+
+26. Refactor new article form into generic article form partial which can then be used for new and edit views.
+
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
 
@@ -69,3 +76,5 @@ https://guides.rubyonrails.org/getting_started.html
 -  When an action does not explicitly render a view (or otherwise trigger an HTTP response), Rails will automatically render a view that matches the name of the controller and action.
 
 > Application classes and modules are available everywhere, you do not need and should not load anything under app with require.
+
+>  partials are named with a leading underscore to distinguish them from regular views, even though they are referred to without the underscore.
