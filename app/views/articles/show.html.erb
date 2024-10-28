@@ -14,12 +14,7 @@
     <% if @article.comments.empty? %>
         <p class="text-gray-400">Be the first to add a comment...</p>
     <% end %>
-    <% @article.comments.each do |comment|%>
-        <div class="rounded-xl bg-gray-100 mb-5 py-2 px-3">
-            <p class=""><%= comment.body%></p>
-            <p class="text-right italic text-gray-400">- <%= comment.commenter%></p>
-        </div>
-    <% end %>
+    <%= render @article.comments %>
 </div>
 <div>
     <%= render "comments/form", article: @article%>
