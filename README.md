@@ -80,6 +80,7 @@ Run using `bin/dev` in WSL console.
 
 29. Link the destroy action to the show view using Turbo attributes to create a confirmation dialog and a DELETE request.
 
+
 ## Notes
 > In the development environment, Rails does not generally require you to restart the server; changes you make in files will be automatically picked up by the server.
 

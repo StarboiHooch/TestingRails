@@ -1,6 +1,5 @@
-<%= form_with model: article do |form| %>
-  <div class="container">
-
+<div class="container">
+  <%= form_with model: article do |form| %>
     <div id="edit-title" class="flex flex-col lg:flex-row mt-5">
       <div class="w-full lg:w-1/4 text-left lg:text-right p-2">
         <%= form.label :title, "Title:"%>
@@ -33,5 +32,5 @@
     <div class="flex justify-center mt-5">
       <%= form.button "Save", type: :submit, class: "rounded-xl border-2 border-gray-800 p-2"%>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

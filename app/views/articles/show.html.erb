@@ -7,4 +7,18 @@
                     turbo_confirm: "Are you sure?"
                   }}
     ]%>
-<p class="text-center mt-5"><%= @article.body %></p>
+<p class=" my-5"><%= @article.body %></p>
+<hr>
+<div id="comments-section" class="">
+    <h3 class="font-semibold text-lg mt-5">Comments:</h3>
+    <% @article.comments.each do |comment|%>
+        <div class="rounded-xl bg-gray-100 mb-5 py-2 px-3">
+            <p class=""><%= comment.body%></p>
+            <p class="text-right italic text-gray-400">- <%= comment.commenter%></p>
+        </div>
+    <% end %>
+</div>
+<div>
+    <h4>Add a comment</h4>
+    <%= render "comments/form", article: @article%>
+</div>
