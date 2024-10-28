@@ -5,7 +5,7 @@
         <%= form.label :title, "Title:"%>
       </div>
       <div class="w-full lg:w-1/2">
-        <%= form.text_field :title, class: "w-full h-full rounded-xl border-2 border-gray-400"%>
+        <%= form.text_field :title, class: "w-full h-full"%>
       </div>  
       <div id="body-errors" class="w-full lg:w-1/4 text-left p-2">
         <% article.errors.full_messages_for(:title).each do |message| %>
@@ -20,7 +20,7 @@
         <%= form.label :body, "Body:"%>
       </div>
       <div class="w-full lg:w-1/2">
-        <%= form.text_area :body, class: "w-full h-full rounded-xl border-2 border-gray-400"%>
+        <%= form.text_area :body, class: "w-full h-full"%>
       </div>  
       <div id="body-errors" class="w-full lg:w-1/4 text-left p-2">
         <% article.errors.full_messages_for(:body).each do |message| %>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="flex justify-center mt-5">
-      <%= form.button "Save", type: :submit, class: "rounded-xl border-2 border-gray-800 p-2"%>
+      <%= form.button "Save", type: :submit%>
     </div>
   <% end %>
 </div>

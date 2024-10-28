@@ -1,15 +1,15 @@
-<div class="container">
+<div class="ml-20">
     <%= form_with model: [ @article, @article.comments.build ] do |form| %>
     <div>
-        <%= form.label :commenter %><br>
-        <%= form.text_field :commenter %>
+        <%= form.label :commenter, "Your Name", class: "block w-full text-right m-0 p-2 text-gray-400"%>
+        <%= form.text_field :commenter, class: "w-full" %>
     </div>
     <div>
-        <%= form.label :body %><br>
-        <%= form.text_area :body %>
+        <%= form.label :body, "Your Comment", class: "block w-full text-right m-0 p-2 text-gray-400" %>
+        <%= form.text_area :body, class: "w-full"  %>
     </div>
-    <div>
-        <%= form.button "Post", type: :submit, class: "rounded-xl border-2 border-gray-800 p-2"%>
+    <div class="flex justify-end">
+        <%= form.button "Post", type: :submit%>
     </div>
     <% end %>
 </div>

@@ -18,3 +18,24 @@
 body {
     color: rgb(31 41 55);
 }
+
+input,
+textarea {
+    --tw-border-opacity: 1;
+    border-color: rgb(156 163 175 / var(--tw-border-opacity)) !important;
+    border-width: 2px !important;
+    border-radius: .75rem !important;
+}
+
+button {
+    border-color: rgb(31 41 55 / var(--tw-border-opacity));
+    border-width: 2px;
+    border-radius: .75rem;
+    padding: .5rem;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: rgb(31 41 55);
+    color: rgb(252 211 77);
+}
