@@ -5,6 +5,13 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+
+    if !@article.public?
+      render_error("This article is no longer available.")
+    end
+
+  rescue ActiveRecord::RecordNotFound
+    render_error("No article exists with that ID.")
   end
 
   def new
@@ -37,7 +44,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
-    @article.destroy
+    @article.update(status: "archived")
 
     redirect_to root_path, status: :see_other
   end
