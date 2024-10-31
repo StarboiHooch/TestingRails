@@ -5,6 +5,7 @@ module Visible
 
   included do
     validates :status, inclusion: { in: VALID_STATUSES }
+    after_initialize :set_default_status
   end
 
   class_methods do
@@ -19,5 +20,11 @@ module Visible
 
   def archived?
     status == "archived"
+  end
+
+  private
+
+  def set_default_status
+        self.status ||= "public"
   end
 end

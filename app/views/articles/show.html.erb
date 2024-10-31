@@ -11,10 +11,10 @@
 <hr>
 <div id="comments-section" class="">
     <h3 class="font-semibold text-lg mt-5">Comments:</h3>
-    <% if @article.comments.empty? %>
+    <% if @article.comments.where(status: "public").empty? %>
         <p class="text-gray-400">Be the first to add a comment...</p>
     <% end %>
-    <%= render @article.comments %>
+    <%= render @article.comments.where(status: "public") %>
 </div>
 <div>
     <%= render "comments/form", article: @article%>

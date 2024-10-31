@@ -1,0 +1,5 @@
+class AddDefaultStatusToComments < ActiveRecord::Migration[7.2]
+  def change
+    change_column_default :comments, :status, "public"
+  end
+end

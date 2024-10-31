@@ -1,7 +1,8 @@
-<div class="flex justify-center relative mb-5">
-    <h2 id="page-title" class="underline font-semibold text-xl" ><%= title %></h2>
+<div class="flex items-center mb-5 w-full">
+    <div class="w-1/5"></div>
+    <h2 id="page-title" class="w-3/5 text-center underline font-semibold text-xl" ><%= title %></h2>
     <% if action_icons.present? %>
-        <div id="page-action-icons" class="absolute top-0 right-0 text-4xl font-bold align-right">
+        <div id="page-action-icons" class="w-1/5 text-right text-4xl font-bold align-right">
             <% action_icons.each do |action|%>
                 <%= link_to action[:path],
                      class: "hover:text-amber-300",
