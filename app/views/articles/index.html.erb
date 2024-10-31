@@ -6,8 +6,10 @@
     ]%>
 <ul class="grid sm:grid-clos-1 md:grid-cols-2 lg:grid-cols-3">
     <% @articles.each do |article| %>
-    <li class="flex m-5 border-gray-800 border-4 border-dotted rounded-xl text-center hover:border-amber-300 hover:bg-gray-800 hover:text-white">
-        <%= link_to article.title.titleize, article, class:"w-full h-full p-5" %>
-    </li>
+        <% unless article.archived? %>
+            <li class="flex m-5 border-gray-800 border-4 border-dotted rounded-xl text-center hover:border-amber-300 hover:bg-gray-800 hover:text-white">
+                <%= link_to article.title.titleize, article, class:"w-full h-full p-5" %>
+            </li>
+        <% end %>
     <% end %>
 </ul>
